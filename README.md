@@ -1,0 +1,1 @@
+# Aborcja jest OK

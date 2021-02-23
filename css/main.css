@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1, h2 {
+  font-family: 'Permanent Marker', cursive;
+  animation: h 1s linear;
+  font-weight: 400;
+}
+h1 {
+  font-size: 20vmin;
+}
+h2 {
+  font-size: 10vmin;
+}
+@keyframes h {
+  from {
+    filter: drop-shadow(-5px 5px 0 var(--old-lavender));
+  }
+  to {
+    filter: drop-shadow(5px 5px 0 var(--old-lavender));
+  }
+}
+
+a {
+  font-weight: 800;
+  text-decoration: underline;
+  color: var(--off-white);
+  background-color: transparent;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 500vh;
+  text-align: center;
+  animation: body 1s linear;
+  color: var(--off-white);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vmin;
+  font-weight: 700;
+}
+@keyframes body {
+  from {
+    background-color: var(--mauvelous);
+  }
+  to {
+    background-color: var(--mystic-pearl);
+  }
+}
+
+.progress {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progress 1s linear;
+}
+@keyframes progress {
+  from {
+    background-color: var(--bilboa-flower);
+    width: 0%;
+  }
+  to {
+    background-color: var(--medium-purple);
+    width: 100%;
+  }
+}
+
+.hanger-wrap {
+  position: fixed;
+  top: 0;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+}
+.hanger {
+  position: absolute;
+  top: 30vmin;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation: hanger 1s linear;
+  fill: var(--apple);
+}
+
+@keyframes hanger {
+  0% {
+    transform: translateX(0) translateY(0);
+    filter: drop-shadow(-10px 10px 0 var(--dell));
+  }
+  33% {
+    transform: translateX(100vw) translateY(-130vmin);
+  }
+  66% {
+    transform: translateX(-100vw) translateY(-130vmin);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    filter: drop-shadow(10px 10px 0 var(--dell));
+  }
+}
+
+.top-wrap, .left-wrap, .right-wrap {
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  height: 90vh;
+}
+
+.top, .left, .right {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.top-wrap {
+  animation: top 1s linear;
+}
+@keyframes top {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  33% {
+    transform: translateX(100vw) translateY(-130vmin);
+  }
+  66% {
+    transform: translateX(-100vw) translateY(-130vmin);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+.left-wrap {
+  animation: left 1s linear;
+}
+@keyframes left {
+  0% {
+    transform: translateX(-100vw) translateY(130vmin);
+  }
+  33% {
+    transform: translateX(0) translateY(0);
+  }
+  66% {
+    transform: translateX(-200vw) translateY(0);
+  }
+  100% {
+    transform: translateX(-100vw) translateY(130vmin);
+  }
+}
+.right-wrap {
+  animation: right 1s linear;
+}
+@keyframes right {
+  0% {
+    transform: translateX(100vw) translateY(130vmin);
+  }
+  33% {
+    transform: translateX(200vw) translateY(0);
+  }
+  66% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(100vw) translateY(130vmin);
+  }
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  /* Colours */
+  --off-white: rgb(240, 240, 240);
+  --apple: rgb(72, 144, 48);
+  --mauvelous: rgb(240, 168, 192);
+  --mystic-pearl: rgb(216, 96, 144);
+  --dell: rgb(72, 96, 24);
+  --black: rgb(0, 0, 0);
+  --medium-purple: rgb(144, 99, 216);
+  --bilboa-flower: rgb(192, 171, 240);
+  --old-lavender: rgb(120, 96, 120);
+}

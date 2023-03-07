@@ -36,7 +36,12 @@ body {
   font-size: 3vmin;
   font-weight: 700;
   background-color: var(--mystic-pearl);
-  background-image: url(../img/icon.svg);
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/icon.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
